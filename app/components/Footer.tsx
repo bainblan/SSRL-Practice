@@ -44,55 +44,64 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-gray-800 px-6 py-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Link sections */}
-        <div className="flex flex-wrap gap-x-16 gap-y-6 mb-8">
-          {sections.map((section) => (
-            <div key={section.title}>
-              <p className="text-white text-sm font-semibold mb-2 font-[Montserrat,sans-serif]">
-                {section.title}
-              </p>
-              <ul className="space-y-1">
-                {section.links.map((link) => {
-                  const isExternal = link.href.startsWith("http");
-                  const Component = isExternal ? "a" : Link;
-                  const extraProps = isExternal
-                    ? { target: "_blank" as const, rel: "noopener noreferrer" }
-                    : {};
-                  return (
-                    <li key={link.label}>
-                      <Component
-                        href={link.href}
-                        className="text-[#dae9f4]/50 hover:text-[#80d4f6] text-[10px] font-bold font-[Armata,sans-serif] transition-colors"
-                        {...extraProps}
-                      >
-                        {link.label}
-                      </Component>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          ))}
-        </div>
+    <footer className="px-6 pb-8">
+      {/* White hr matching original */}
+      <hr className="border-white mb-6" />
 
-        {/* Social icons */}
-        <div className="flex justify-end gap-5">
-          {socials.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#dae9f4] hover:text-[#80d4f6] transition-colors"
-              aria-label={social.label}
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d={social.icon} />
-              </svg>
-            </a>
-          ))}
+      <div className="max-w-7xl mx-auto">
+        {/* Sections row with socials floated right */}
+        <div className="flex flex-wrap justify-between">
+          {/* Left: department sections */}
+          <div className="flex flex-wrap">
+            {sections.map((section) => (
+              <div key={section.title} className="mr-16 mb-4">
+                <p className="text-white text-[14px] font-semibold mb-[6px]"
+                  style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
+                >
+                  {section.title}
+                </p>
+                <ul className="p-0 m-0">
+                  {section.links.map((link) => {
+                    const isExternal = link.href.startsWith("http");
+                    const Component = isExternal ? "a" : Link;
+                    const extraProps = isExternal
+                      ? { target: "_blank" as const, rel: "noopener noreferrer" }
+                      : {};
+                    return (
+                      <li key={link.label} className="py-[5px] leading-none list-none">
+                        <Component
+                          href={link.href}
+                          className="text-[#dae9f4]/50 hover:text-[#80d4f6] text-[10px] font-bold transition-colors"
+                          style={{ fontFamily: "var(--font-armata), Armata, sans-serif" }}
+                          {...extraProps}
+                        >
+                          {link.label}
+                        </Component>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Right: social icons, aligned to bottom */}
+          <div className="flex items-end gap-5 mb-4">
+            {socials.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#dae9f4] hover:text-[#80d4f6] transition-colors"
+                aria-label={social.label}
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d={social.icon} />
+                </svg>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

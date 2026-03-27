@@ -38,9 +38,9 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${lato.variable} ${armata.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body>
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
