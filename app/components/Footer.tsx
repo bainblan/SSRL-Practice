@@ -64,7 +64,7 @@ export default function Footer() {
                     <li key={link.label}>
                       <Component
                         href={link.href}
-                        className="text-[#dae9f4]/50 hover:text-[#80d4f6] text-xs font-bold font-[Armata,sans-serif] transition-colors"
+                        className="text-[#dae9f4]/50 hover:text-[#80d4f6] text-[10px] font-bold font-[Armata,sans-serif] transition-colors"
                         {...extraProps}
                       >
                         {link.label}

@@ -1,45 +1,8 @@
-"use client";
-
-import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import ScrollSection from "./components/ScrollSection";
 import CubesatParallax from "./components/CubesatParallax";
 
-const sectionIds = [
-  "solar-panels",
-  "frame",
-  "adcs",
-  "payload",
-  "computer",
-  "spacecraft",
-];
-
 export default function Home() {
-  const [activeSection, setActiveSection] = useState(-1);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const idx = sectionIds.indexOf(entry.target.id);
-            if (idx !== -1) {
-              setActiveSection((prev) => Math.max(prev, idx));
-            }
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div
       className="relative"
@@ -48,8 +11,8 @@ export default function Home() {
         backgroundRepeat: "repeat",
       }}
     >
-      {/* Cubesat assembly floating on the right side (desktop only) */}
-      <CubesatParallax activeSection={activeSection} />
+      {/* Cubesat parallax — scroll-driven, self-contained */}
+      <CubesatParallax />
 
       {/* ===== SPLASH ===== */}
       <section className="flex flex-col items-center justify-center text-center pt-16 pb-8 px-6">
@@ -90,7 +53,7 @@ export default function Home() {
           />
         </div>
 
-        <p className="max-w-2xl text-sm text-[#F6F6F6] font-[Armata,sans-serif] leading-relaxed">
+        <p className="max-w-2xl font-[Armata,sans-serif] leading-relaxed">
           The Small Satellite Research Laboratory (SSRL) is developing and
           launching new and innovative technologies into space by utilizing the
           CubeSat platform, a small-scale satellite that is designed for rapid

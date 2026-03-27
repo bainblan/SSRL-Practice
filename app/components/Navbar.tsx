@@ -175,7 +175,7 @@ export default function Navbar() {
             href="https://gail.uga.edu/commit?search=90072000&desonly=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 lg:py-1 text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
+            className="px-4 py-2 lg:py-1 bg-white text-black! font-[800] hover:bg-gray-200 transition-colors"
           >
             Donate
           </a>

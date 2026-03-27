@@ -22,10 +22,10 @@ export default function ScrollSection({
       }`}
     >
       <div className="max-w-2xl text-center">
-        <h2 className="text-3xl font-bold text-[#F6F6F6] mb-6 font-[Montserrat,sans-serif] drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)]">
+        <h2 className="mb-6 drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)]">
           {title}
         </h2>
-        <p className="text-sm text-[#F6F6F6] font-[Armata,sans-serif] leading-relaxed drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)]">
+        <p className="font-[Armata,sans-serif] leading-relaxed drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)]">
           {children}
         </p>
       </div>
