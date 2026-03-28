@@ -1,0 +1,155 @@
+import Image from "next/image";
+
+interface Partner {
+  name: string;
+  description: string;
+  image: string;
+  href: string;
+}
+
+const partners: Partner[] = [
+  {
+    name: "NASA AMES",
+    description:
+      "We have a space act agreement with NASA Ames for testing our Cubesats.",
+    image: "/images/logos/color-ames.png",
+    href: "https://www.nasa.gov/ames",
+  },
+  {
+    name: "NASA USIP",
+    description: "Funding agency for the SPOC mission.",
+    image: "/images/logos/nasa_logo.png",
+    href: "https://ntrs.nasa.gov/citations/20190028944",
+  },
+  {
+    name: "University Nanosat Program",
+    description: "Project partner for the MOCI mission.",
+    image: "/images/logos/unp_logo3.png",
+    href: "http://prs.afrl.kirtland.af.mil/UNP/",
+  },
+  {
+    name: "AFRL",
+    description: "Funding Agency for MOCI.",
+    image: "/images/logos/air_force_logo.png",
+    href: "http://www.af.mil/About-Us/Fact-Sheets/Display/Article/104463/air-force-research-laboratory/",
+  },
+  {
+    name: "Georgia Space Consortium",
+    description: "Project Partner for the SPOC mission.",
+    image: "/images/logos/GSGC_Logo.png",
+    href: "https://gasgc.org/wp/",
+  },
+  {
+    name: "Georgia Space Working Group",
+    description:
+      "SSRL works with the space working group to help with the overall vision of Georgias role in the aerospace community.",
+    image: "/images/logos/GAlogo.aerospace.jpg",
+    href: "http://www.georgia.org/business-resources/georgia-centers-of-innovation/center-innovation-aerospace/",
+  },
+  {
+    name: "AGI",
+    description: "provides software for students to use in course work.",
+    image: "/images/logos/AGI_logo_Horiz.png",
+    href: "https://www.agi.com/home",
+  },
+  {
+    name: "Georgia Sea Grant",
+    description:
+      "Project partner with SPOC to help with insitu data collection on Sapelo Island.",
+    image: "/images/logos/seagrant.png",
+    href: "http://gacoast.uga.edu/",
+  },
+  {
+    name: "Johns Hopkins APL",
+    description:
+      "SSRL is working with APL on advancing advanced processors in the space environment",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/JHU_APL_logo.png/440px-JHU_APL_logo.png",
+    href: "https://www.jhuapl.edu/",
+  },
+  {
+    name: "SpaceWorks",
+    description:
+      "SSRL is working with SpaceWorks in developing new and innovative space system solutions",
+    image: "/images/logos/SpaceWorks.png",
+    href: "https://www.spaceworks.aero/",
+  },
+];
+
+function PartnerCard({ partner }: { partner: Partner }) {
+  const isExternal = partner.image.startsWith("http");
+
+  return (
+    <a
+      href={partner.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block no-underline"
+    >
+      <div className="group relative bg-white rounded-[10%] shadow-[0_2px_6px_1px_#000000] p-8 w-[250px] h-[350px] overflow-hidden">
+        {/* Partner logo */}
+        <div className="relative w-full h-full">
+          {isExternal ? (
+            <img
+              src={partner.image}
+              alt={partner.name}
+              className="w-full h-full object-contain"
+            />
+          ) : (
+            <Image
+              src={partner.image}
+              alt={partner.name}
+              fill
+              className="object-contain"
+              unoptimized
+            />
+          )}
+        </div>
+
+        {/* "Learn More" label */}
+        <div className="absolute bottom-8 left-8 border-l-[6px] border-[rgb(238,196,90)] py-[5px] px-[5px] z-10">
+          <strong className="text-black text-[12px]">Learn More</strong>
+        </div>
+
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-[#008CBA] opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <div className="text-center px-4">
+            <h1 className="text-black! text-[20px] mb-2">{partner.name}</h1>
+            <p className="text-black!">{partner.description}</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+}
+
+export default function PartnersPage() {
+  return (
+    <section className="max-w-[1140px] mx-auto px-4 pt-4 pb-8">
+      <Image
+        src="/images/logos/ssrl_logo_long-new.png"
+        alt="Small Satellite Research Laboratory"
+        width={800}
+        height={200}
+        className="w-full h-auto mb-3"
+        unoptimized
+      />
+
+      <h1
+        className="text-center my-[42px] text-[33px]"
+        style={{
+          fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
+        }}
+      >
+        Thank You To Our Partners and Affiliates!
+      </h1>
+
+      {/* 3-column grid matching original partner-grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        {partners.map((partner) => (
+          <PartnerCard key={partner.name} partner={partner} />
+        ))}
+      </div>
+    </section>
+  );
+}

@@ -36,7 +36,8 @@ function Dropdown({
     <div ref={ref} className="relative">
       <button
         onClick={onToggle}
-        className="flex items-center gap-1 px-4 py-1 text-gray-400 hover:text-white transition-colors"
+        className="flex items-center gap-1 px-4 py-1 text-gray-400 hover:text-white transition-colors text-[12px]"
+        style={{ fontFamily: "var(--font-armata), Armata, sans-serif" }}
       >
         {label}
         <svg
