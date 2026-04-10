@@ -1,16 +1,18 @@
 import Image from "next/image";
 import ScrollSection from "./components/ScrollSection";
 import CubesatParallax from "./components/CubesatParallax";
+import { GravityStarsBackground } from "@/components/animate-ui/components/backgrounds/gravity-stars";
 
 export default function Home() {
   return (
-    <div
-      className="relative"
-      style={{
-        backgroundImage: "url(/images/stars/Starsmid.png)",
-        backgroundRepeat: "repeat",
-      }}
-    >
+    <div className="relative">
+      {/* Interactive star field — fixed behind everything, ignores clicks */}
+      <GravityStarsBackground
+        className="fixed inset-0 -z-10 pointer-events-none bg-black text-white"
+        trackWindowMouse
+        scrollParallax={0.5}
+      />
+
       {/* Cubesat parallax — scroll-driven, self-contained */}
       <CubesatParallax />
 

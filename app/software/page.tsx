@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Galaxy from "@/components/ui/galaxy";
 
 interface SoftwareLink {
   label: string;
@@ -150,7 +151,11 @@ function SoftwareItem({
 
 export default function SoftwarePage() {
   return (
-    <section className="max-w-[1140px] mx-auto px-4 pt-4 pb-8">
+    <>
+      <div className="fixed inset-0 -z-0 pointer-events-none">
+        <Galaxy />
+      </div>
+      <section className="relative z-10 max-w-[1140px] mx-auto px-4 pt-4 pb-8">
       {/* SSRLCV */}
       <SoftwareItem
         thumbnail="/images/documents/thumbnails/adamsThesis.png"
@@ -227,6 +232,7 @@ export default function SoftwarePage() {
           ],
         }}
       />
-    </section>
+      </section>
+    </>
   );
 }

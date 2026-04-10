@@ -85,38 +85,59 @@ function PartnerCard({ partner }: { partner: Partner }) {
       href={partner.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="block no-underline"
+      className="block no-underline group w-[250px] h-[350px]"
+      style={{ perspective: "1000px" }}
     >
-      <div className="group relative bg-white rounded-[10%] shadow-[0_2px_6px_1px_#000000] p-8 w-[250px] h-[350px] overflow-hidden">
-        {/* Partner logo */}
-        <div className="relative w-full h-full">
-          {isExternal ? (
-            <img
-              src={partner.image}
-              alt={partner.name}
-              className="w-full h-full object-contain"
-            />
-          ) : (
-            <Image
-              src={partner.image}
-              alt={partner.name}
-              fill
-              className="object-contain"
-              unoptimized
-            />
-          )}
+      <div
+        className="relative w-full h-full transition-transform duration-700 ease-out group-hover:[transform:rotateY(180deg)]"
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {/* Front — logo */}
+        <div
+          className="absolute inset-0 bg-white rounded-[10%] shadow-[0_2px_6px_1px_#000000] p-8 overflow-hidden"
+          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+        >
+          <div className="relative w-full h-full">
+            {isExternal ? (
+              <img
+                src={partner.image}
+                alt={partner.name}
+                className="w-full h-full object-contain"
+              />
+            ) : (
+              <Image
+                src={partner.image}
+                alt={partner.name}
+                fill
+                className="object-contain"
+                unoptimized
+              />
+            )}
+          </div>
+
+          {/* "Learn More" label */}
+          <div className="absolute bottom-8 left-8 border-l-[6px] border-[rgb(238,196,90)] py-[5px] px-[5px] z-10">
+            <strong className="text-black text-[12px]">Learn More</strong>
+          </div>
         </div>
 
-        {/* "Learn More" label */}
-        <div className="absolute bottom-8 left-8 border-l-[6px] border-[rgb(238,196,90)] py-[5px] px-[5px] z-10">
-          <strong className="text-black text-[12px]">Learn More</strong>
-        </div>
-
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-[#008CBA] opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-          <div className="text-center px-4">
-            <h1 className="text-black! text-[20px] mb-2">{partner.name}</h1>
-            <p className="text-black!">{partner.description}</p>
+        {/* Back — description */}
+        <div
+          className="absolute inset-0 bg-[#BA0C2F] rounded-[10%] shadow-[0_2px_6px_1px_#000000] p-8 flex items-center justify-center"
+          style={{
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+            fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
+          }}
+        >
+          <div className="text-center">
+            <h2 className="text-white! text-[22px] font-semibold leading-tight mb-3">
+              {partner.name}
+            </h2>
+            <p className="text-white! text-[13px] leading-snug">
+              {partner.description}
+            </p>
           </div>
         </div>
       </div>
