@@ -44,11 +44,11 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="px-6 pb-8">
-      {/* White hr matching original */}
-      <hr className="border-white mb-6" />
+    <footer className="pb-8">
+      <div className="max-w-[1140px] mx-auto px-4">
+        {/* White hr matching original */}
+        <hr className="border-white mb-6" />
 
-      <div className="max-w-7xl mx-auto">
         {/* Sections row with socials floated right */}
         <div className="flex flex-wrap justify-between">
           {/* Left: department sections */}

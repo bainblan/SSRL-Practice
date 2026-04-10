@@ -111,7 +111,28 @@ export default function CubesatParallax() {
   const [partStates, setPartStates] = useState<
     Map<string, { left: number; top: number; opacity: number }>
   >(new Map());
+  const [visible, setVisible] = useState(false);
   const rafRef = useRef<number>(0);
+
+  // Fade in when the "basic-info" (The CubeSat) section enters the viewport
+  useEffect(() => {
+    const target = document.getElementById("basic-info");
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      // Shrink the observation zone to a narrow band around the vertical center
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     function update() {
@@ -153,8 +174,8 @@ export default function CubesatParallax() {
 
   return (
     <div
-      className="hidden lg:block fixed inset-0 pointer-events-none"
-      style={{ zIndex: 1 }}
+      className="hidden lg:block fixed inset-0 pointer-events-none transition-opacity duration-1000 ease-out"
+      style={{ zIndex: 1, opacity: visible ? 1 : 0 }}
     >
       {parts.map((part) => {
         const state = partStates.get(part.id);

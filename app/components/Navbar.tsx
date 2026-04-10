@@ -95,7 +95,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-black/70 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-[76px] px-4">
+      <div className="max-w-[1140px] mx-auto flex items-center justify-between h-[76px] px-4">
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
@@ -103,7 +103,7 @@ export default function Navbar() {
             alt="SSRL Logo"
             width={160}
             height={64}
-            className="h-12 w-auto"
+            className="h-4 w-auto"
             unoptimized
           />
         </Link>

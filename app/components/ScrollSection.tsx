@@ -17,7 +17,7 @@ export default function ScrollSection({
     <section
       id={id}
       ref={ref}
-      className={`min-h-[70vh] flex items-center justify-center px-6 transition-all duration-1000 ease-out ${
+      className={`min-h-screen flex items-center justify-center px-6 py-24 transition-all duration-1000 ease-out ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       }`}
     >

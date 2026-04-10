@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Montserrat, Lato, Armata } from "next/font/google";
+import { Montserrat, Lato, Armata, Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import ConditionalFooter from "./components/ConditionalFooter";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -36,12 +39,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${lato.variable} ${armata.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", montserrat.variable, lato.variable, armata.variable, "font-sans", geist.variable)}
     >
       <body>
         <Navbar />
         <main>{children}</main>
-        <Footer />
+        <ConditionalFooter />
       </body>
     </html>
   );

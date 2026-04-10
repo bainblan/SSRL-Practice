@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { StarfieldBackground } from "@/components/ui/starfield";
 
 interface Partner {
   name: string;
@@ -125,7 +126,9 @@ function PartnerCard({ partner }: { partner: Partner }) {
 
 export default function PartnersPage() {
   return (
-    <section className="max-w-[1140px] mx-auto px-4 pt-4 pb-8">
+    <>
+      <StarfieldBackground />
+      <section className="relative z-10 max-w-[1140px] mx-auto px-4 pt-4 pb-8">
       <Image
         src="/images/logos/ssrl_logo_long-new.png"
         alt="Small Satellite Research Laboratory"
@@ -150,6 +153,7 @@ export default function PartnersPage() {
           <PartnerCard key={partner.name} partner={partner} />
         ))}
       </div>
-    </section>
+      </section>
+    </>
   );
 }
