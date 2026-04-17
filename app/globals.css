@@ -186,8 +186,6 @@ hr {
   body {
     @apply text-foreground;
     background-color: #000;
-    background-image: url("/images/stars/Starsmid.png");
-    background-repeat: repeat;
   }
   html {
     @apply font-sans;

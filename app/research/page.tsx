@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GravityStarsBackground } from "@/components/animate-ui/components/backgrounds/gravity-stars";
 
 interface ResearchItem {
   title: string;
@@ -113,7 +112,6 @@ export default function ResearchPage() {
 
   return (
     <>
-      <GravityStarsBackground className="fixed inset-0 -z-0 pointer-events-none" />
       <section className="relative z-10 max-w-[1140px] mx-auto px-4 pt-12 pb-8">
       <h2 className="text-center mb-8">Our Publications and Research</h2>
 
