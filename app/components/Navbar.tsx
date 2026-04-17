@@ -7,6 +7,7 @@ import Image from "next/image";
 interface DropdownItem {
   label: string;
   href: string;
+  external?: boolean;
 }
 
 function Dropdown({
@@ -24,20 +25,20 @@ function Dropdown({
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        if (open) onToggle();
+      if (ref.current && !ref.current.contains(e.target as Node) && open) {
+        onToggle();
       }
     }
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [open, onToggle]);
 
   return (
-    <div ref={ref} className="relative">
+    <div ref={ref} className="relative w-full lg:w-auto">
       <button
         onClick={onToggle}
-        className="flex items-center gap-1 px-4 py-1 text-gray-400 hover:text-white transition-colors text-[12px]"
-        style={{ fontFamily: "var(--font-armata), Armata, sans-serif" }}
+        className="flex items-center gap-1 px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
       >
         {label}
         <svg
@@ -54,18 +55,32 @@ function Dropdown({
           />
         </svg>
       </button>
+
       {open && (
-        <div className="lg:absolute left-0 top-full mt-1 min-w-[180px] bg-black/90 border border-gray-700 rounded shadow-lg z-50">
-          {items.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
-              onClick={onToggle}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <div className="lg:absolute left-0 top-full mt-1 min-w-[220px] bg-black/90 border border-gray-700 rounded shadow-lg z-50">
+          {items.map((item) =>
+            item.external ? (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                onClick={onToggle}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                onClick={onToggle}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </div>
       )}
     </div>
@@ -73,16 +88,16 @@ function Dropdown({
 }
 
 const mediaItems: DropdownItem[] = [
-  { label: "Media", href: "/media" },
-  { label: "Gallery", href: "/gallery" },
+  { label: "Media", href: "https://smallsat.uga.edu/media", external: true },
+  { label: "Gallery", href: "https://smallsat.uga.edu/gallery", external: true },
 ];
 
 const orgItems: DropdownItem[] = [
-  { label: "Who We Are", href: "/about" },
-  { label: "Alumni", href: "/alumni" },
-  { label: "Founding & History", href: "/founding" },
-  { label: "Facilities", href: "/facilities" },
-  { label: "Outreach", href: "/outreach" },
+  { label: "Who We Are", href: "https://smallsat.uga.edu/about", external: true },
+  { label: "Alumni", href: "https://smallsat.uga.edu/alumni", external: true },
+  { label: "Founding & History", href: "https://smallsat.uga.edu/founding", external: true },
+  { label: "Facilities", href: "https://smallsat.uga.edu/facilities", external: true },
+  { label: "Outreach", href: "https://smallsat.uga.edu/outreach", external: true },
 ];
 
 export default function Navbar() {
@@ -99,37 +114,55 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
-            src="/ssrl.svg"
+            src="/images/logos/ssrl.svg"
             alt="SSRL Logo"
-            width={160}
-            height={64}
-            className="h-4 w-auto"
+            width={50}
+            height={18}
+            className="h-5 w-auto"
             unoptimized
           />
         </Link>
 
-        {/* Mobile toggle */}
         <button
-          className="lg:hidden text-pink-400 p-2"
+          className="lg:hidden text-[#8a9ffc] p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 8h16M4 16h16"
+              />
             )}
           </svg>
         </button>
 
-        {/* Nav links */}
         <div
           className={`${
             mobileOpen ? "flex" : "hidden"
           } lg:flex flex-col lg:flex-row items-start lg:items-center absolute lg:static top-[76px] left-0 right-0 bg-black lg:bg-transparent z-50`}
         >
-          <Link href="/missions" className="px-4 py-2 lg:py-1 text-gray-400 hover:text-white transition-colors">
+          <Link
+            href="/"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+          >
+            Home
+          </Link>
+
+          <Link
+            href="/missions"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+          >
             Missions
           </Link>
 
@@ -140,17 +173,32 @@ export default function Navbar() {
             onToggle={() => toggleDropdown("media")}
           />
 
-          <Link href="/research" className="px-4 py-2 lg:py-1 text-gray-400 hover:text-white transition-colors">
+          <a
+            href="https://smallsat.uga.edu/research"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+          >
             Publications
-          </Link>
+          </a>
 
-          <Link href="/software" className="px-4 py-2 lg:py-1 text-gray-400 hover:text-white transition-colors">
+          <a
+            href="https://smallsat.uga.edu/software"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+          >
             Software
-          </Link>
+          </a>
 
-          <Link href="/partners" className="px-4 py-2 lg:py-1 text-gray-400 hover:text-white transition-colors">
+          <a
+            href="https://smallsat.uga.edu/partners"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+          >
             Partners
-          </Link>
+          </a>
 
           <Dropdown
             label="Our Organization"
@@ -163,20 +211,25 @@ export default function Navbar() {
             href="https://qualtricsxmfclnmhypx.qualtrics.com/jfe/form/SV_bqhBY8mdHZPuPEG"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 lg:py-1 text-gray-400 hover:text-white transition-colors"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
           >
             Apply
           </a>
 
-          <Link href="/contact" className="px-4 py-2 lg:py-1 text-gray-400 hover:text-white transition-colors">
+          <a
+            href="https://smallsat.uga.edu/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+          >
             Contact Us
-          </Link>
+          </a>
 
           <a
             href="https://gail.uga.edu/commit?search=90072000&desonly=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 lg:py-1 bg-white text-black! font-[800] hover:bg-gray-200 transition-colors"
+            className="px-4 py-2 lg:py-1 text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
           >
             Donate
           </a>
