@@ -11,8 +11,11 @@ export default function Page() {
       <HeroSection />
       <SectionDivider />
       <AboutSection />
+      <SectionDivider />
       <CubeSatSection />
+      <SectionDivider />
       <ComponentsSection />
+      <SectionDivider />
       <JoinSection />
       <SectionDivider />
     </div>

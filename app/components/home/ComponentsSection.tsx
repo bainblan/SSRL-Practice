@@ -173,7 +173,7 @@ export default function ComponentsSection() {
   return (
     <section
       id="components"
-      className="min-h-screen flex flex-col justify-center items-center text-center border-b border-white/10 px-4 scroll-mt-10"
+      className="min-h-screen flex flex-col justify-center items-center text-center px-4 scroll-mt-10"
     >
       <div className="max-w-6xl mx-auto w-full">
         <h2 className="text-4xl md:text-5xl mb-8">Anatomy of a CubeSat</h2>

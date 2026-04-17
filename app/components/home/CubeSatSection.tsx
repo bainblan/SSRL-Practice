@@ -2,7 +2,7 @@ export default function CubeSatSection() {
   return (
     <section
       id="cubesat"
-      className="min-h-screen flex flex-col justify-center items-center text-center border-b border-white/10 px-4 scroll-mt-10"
+      className="min-h-screen flex flex-col justify-center items-center text-center px-4 scroll-mt-10"
     >
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl mb-8">The CubeSat Platform</h2>
