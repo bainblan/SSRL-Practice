@@ -7,7 +7,7 @@ import SectionDivider from "@/app/components/home/SectionDivider";
 
 export default function Page() {
   return (
-    <main className="bg-[#050508] text-white overflow-x-hidden">
+    <div className="bg-[#050508] text-white overflow-x-clip">
       <HeroSection />
       <SectionDivider />
       <AboutSection />
@@ -15,6 +15,6 @@ export default function Page() {
       <ComponentsSection />
       <JoinSection />
       <SectionDivider />
-    </main>
+    </div>
   );
 }
