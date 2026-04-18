@@ -127,7 +127,6 @@ function PartnerCard({ partner }: { partner: Partner }) {
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
-            fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
           }}
         >
           <div className="text-center">
@@ -157,12 +156,7 @@ export default function PartnersPage() {
         unoptimized
       />
 
-      <h1
-        className="text-center my-[42px] text-[33px]"
-        style={{
-          fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
-        }}
-      >
+      <h1 className="text-center my-[42px] text-[33px]">
         Thank You To Our Partners and Affiliates!
       </h1>
 

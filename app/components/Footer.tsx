@@ -55,9 +55,7 @@ export default function Footer() {
           <div className="flex flex-wrap">
             {sections.map((section) => (
               <div key={section.title} className="mr-16 mb-4">
-                <p className="text-white text-[14px] font-semibold mb-[6px]"
-                  style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
-                >
+                <p className="text-white text-md font-semibold mb-[6px]">
                   {section.title}
                 </p>
                 <ul className="p-0 m-0">
@@ -71,8 +69,7 @@ export default function Footer() {
                       <li key={link.label} className="py-[5px] leading-none list-none">
                         <Component
                           href={link.href}
-                          className="text-[#dae9f4]/50 hover:text-[#80d4f6] text-[10px] font-bold transition-colors"
-                          style={{ fontFamily: "var(--font-armata), Armata, sans-serif" }}
+                          className="text-[#dae9f4]/50 hover:text-[#BA0C2F] text-xs font-bold transition-colors"
                           {...extraProps}
                         >
                           {link.label}
@@ -93,7 +90,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#dae9f4] hover:text-[#80d4f6] transition-colors"
+                className="text-[#dae9f4] hover:text-[#BA0C2F] transition-colors"
                 aria-label={social.label}
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

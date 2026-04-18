@@ -215,7 +215,6 @@ export default function MediaPage() {
                 <div
                   style={{
                     color: "#3897f0",
-                    fontFamily: "Arial, sans-serif",
                     fontSize: "14px",
                     fontStyle: "normal",
                     fontWeight: 550,
@@ -350,7 +349,6 @@ export default function MediaPage() {
             <p
               style={{
                 color: "#c9c8cd",
-                fontFamily: "Arial, sans-serif",
                 fontSize: "14px",
                 lineHeight: "17px",
                 marginBottom: 0,
@@ -366,7 +364,6 @@ export default function MediaPage() {
                 href="https://www.instagram.com/ugassrl/?utm_source=ig_embed&utm_campaign=loading"
                 style={{
                   color: "#c9c8cd",
-                  fontFamily: "Arial, sans-serif",
                   fontSize: "14px",
                   fontStyle: "normal",
                   fontWeight: "normal",
@@ -382,7 +379,6 @@ export default function MediaPage() {
                 href="https://www.instagram.com/ugassrl/?utm_source=ig_embed&utm_campaign=loading"
                 style={{
                   color: "#c9c8cd",
-                  fontFamily: "Arial, sans-serif",
                   fontSize: "14px",
                   fontStyle: "normal",
                   fontWeight: "normal",

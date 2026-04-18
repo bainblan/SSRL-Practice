@@ -86,10 +86,7 @@ function SoftwareItem({
   research,
 }: SoftwareItemProps) {
   return (
-    <div
-      className="w-full bg-[#072027] shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)] my-2 p-4"
-      style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
-    >
+    <div className="w-full bg-[#072027] shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)] my-2 p-4">
       {/* Top row: thumbnail + title */}
       <div className="flex flex-col md:flex-row gap-4 mb-4">
         <div className="shrink-0">

@@ -23,22 +23,22 @@ export default function AboutSection() {
           <img
             src="/images/logos/air_force_logo.png"
             alt="Air Force Logo"
-            className="h-8 md:h-10 w-auto transition hover:scale-110 hover:-translate-y-1"
+            className="h-8 md:h-16 w-auto transition hover:scale-110 hover:-translate-y-1"
           />
           <img
             src="/images/logos/nasa_logo.png"
             alt="NASA Logo"
-            className="h-8 md:h-10 w-auto transition hover:scale-110 hover:-translate-y-1"
+            className="h-8 md:h-16 w-auto transition hover:scale-110 hover:-translate-y-1"
           />
           <img
             src="/images/logos/unp_logo3.png"
             alt="UNP Logo"
-            className="h-8 md:h-10 w-auto transition hover:scale-110 hover:-translate-y-1"
+            className="h-8 md:h-16 w-auto transition hover:scale-110 hover:-translate-y-1"
           />
           <img
             src="/images/logos/ssrl_logo_long-new.png"
             alt="SSRL Logo"
-            className="h-8 md:h-10 w-auto transition hover:scale-110 hover:-translate-y-1"
+            className="h-8 md:h-16 w-auto transition hover:scale-110 hover:-translate-y-1"
           />
         </div>
       </div>

@@ -47,10 +47,7 @@ function ProfileCard({ member }: { member: Member }) {
         alt={member.name}
         className="h-[120px] w-[120px] rounded-full object-cover object-top mb-[10px]"
       />
-      <span
-        className="text-[#f4f4f4] text-center text-[14px] mx-[2px]"
-        style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
-      >
+      <span className="text-[#f4f4f4] text-center text-[14px] mx-[2px]">
         {member.name}
       </span>
       {member.role && (
@@ -86,10 +83,7 @@ function ProfileCardExtra({ member }: { member: Member }) {
         alt={member.name}
         className="h-[120px] w-[120px] rounded-full object-cover object-top mb-[10px]"
       />
-      <span
-        className="text-[#f4f4f4] text-center text-[14px] mx-[2px]"
-        style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
-      >
+      <span className="text-[#f4f4f4] text-center text-[14px] mx-[2px]">
         {member.name}
       </span>
       {member.role && (
@@ -236,7 +230,6 @@ export default function AboutPage() {
                 className="flex-1 py-[14px] px-[16px] text-[17px] text-white border-2 border-[goldenrod] cursor-pointer transition-colors"
                 style={{
                   backgroundColor: i === activeTab ? "goldenrod" : "gray",
-                  fontFamily: "var(--font-montserrat), Montserrat, sans-serif",
                 }}
               >
                 {tab.label}

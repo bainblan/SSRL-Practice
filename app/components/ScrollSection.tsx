@@ -25,7 +25,7 @@ export default function ScrollSection({
         <h2 className="mb-6 drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)]">
           {title}
         </h2>
-        <p className="font-[Armata,sans-serif] leading-relaxed drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)]">
+        <p className="leading-relaxed drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)]">
           {children}
         </p>
       </div>

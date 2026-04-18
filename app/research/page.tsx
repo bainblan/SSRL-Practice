@@ -45,8 +45,7 @@ function DocumentCard({ item }: { item: ResearchItem }) {
       href={item.src.startsWith("/") ? item.src : `/${item.src}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex w-full bg-[#072027] shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)] hover:shadow-[0_4px_8px_0px_rgba(0,0,0,0.4)] active:shadow-[0_1px_1px_0_rgba(0,0,0,0.5)] transition-shadow my-2 no-underline"
-      style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
+      className="flex w-full bg-white shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)] hover:shadow-[0_4px_8px_0px_rgba(0,0,0,0.4)] active:shadow-[0_1px_1px_0_rgba(0,0,0,0.5)] transition-shadow my-2 no-underline"
     >
       <div className="flex">
         {/* Thumbnail — hidden on mobile */}
@@ -59,18 +58,18 @@ function DocumentCard({ item }: { item: ResearchItem }) {
 
         {/* Content */}
         <div className="p-[18px_24px]">
-          <div className="text-[12px] text-white mb-1">{item.authors}</div>
-          <div className="text-[20px] font-bold text-white mb-[18px] leading-tight">
+          <div className="text-[12px] text-black mb-1">{item.authors}</div>
+          <div className="text-[20px] font-bold text-black mb-[18px] leading-tight">
             {item.title}
           </div>
           <div className="flex flex-col md:flex-row">
             {item.subTitle && (
-              <div className="text-[12px] text-[#7e7e7e] w-[200px] mr-10">
+              <div className="text-[12px] text-black w-[200px] mr-10">
                 {item.subTitle}
               </div>
             )}
             {item.date && (
-              <div className="text-[12px] text-[#7e7e7e] w-[200px] mr-10">
+              <div className="text-[12px] text-black w-[200px] mr-10">
                 {item.date}
               </div>
             )}
@@ -123,13 +122,11 @@ export default function ResearchPage() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="text-[20px] py-2 px-2 md:w-[300px] w-full border-b-2 border-white border-t-0 border-l-0 border-r-0 bg-[#10141e] text-white md:mr-5 outline-none"
-          style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
         />
         <select
           value={tag}
           onChange={(e) => setTag(e.target.value)}
           className="text-[20px] py-2 border-b-2 border-white border-t-0 border-l-0 border-r-0 bg-[#10141e] text-white outline-none rounded-none"
-          style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
         >
           {filterOptions.map((opt) => (
             <option key={opt.value} value={opt.value}>
@@ -142,7 +139,7 @@ export default function ResearchPage() {
       {/* Documents grouped by year */}
       {groupedByYear.map(({ year, docs }) => (
         <div key={year}>
-          <h1 className="mt-6 text-[#BA0C2F]">{year}</h1>
+          <h1 className="mt-6 text-white">{year}</h1>
           <div className="flex flex-col w-full">
             {docs.map((item, i) => (
               <DocumentCard key={`${year}-${i}`} item={item} />

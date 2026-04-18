@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Lato, Armata, Geist } from "next/font/google";
+import { Montserrat, Lato, Armata, Geist, Merriweather_Sans, Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import ConditionalFooter from "./components/ConditionalFooter";
@@ -25,6 +25,18 @@ const armata = Armata({
   weight: "400",
 });
 
+const merriweatherSans = Merriweather_Sans({
+  variable: "--font-merriweather-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "UGA Small Satellite Research Laboratory",
   description:
@@ -39,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", montserrat.variable, lato.variable, armata.variable, "font-sans", geist.variable)}
+      className={cn("h-full", "antialiased", montserrat.variable, lato.variable, armata.variable, merriweatherSans.variable, oswald.variable, "font-sans", geist.variable)}
     >
       <body>
         <Navbar />

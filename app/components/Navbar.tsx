@@ -38,7 +38,7 @@ function Dropdown({
     <div ref={ref} className="relative w-full lg:w-auto">
       <button
         onClick={onToggle}
-        style={{ fontFamily: "var(--font-armata), Armata, sans-serif", fontSize: "12px" }}
+        style={{ fontSize: "12px" }}
         className="flex items-center gap-1 px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
       >
         {label}
@@ -89,16 +89,16 @@ function Dropdown({
 }
 
 const mediaItems: DropdownItem[] = [
-  { label: "Media", href: "https://smallsat.uga.edu/media", external: true },
+  { label: "Media", href: "/media" },
   { label: "Gallery", href: "https://smallsat.uga.edu/gallery", external: true },
 ];
 
 const orgItems: DropdownItem[] = [
-  { label: "Who We Are", href: "https://smallsat.uga.edu/about", external: true },
-  { label: "Alumni", href: "https://smallsat.uga.edu/alumni", external: true },
-  { label: "Founding & History", href: "https://smallsat.uga.edu/founding", external: true },
-  { label: "Facilities", href: "https://smallsat.uga.edu/facilities", external: true },
-  { label: "Outreach", href: "https://smallsat.uga.edu/outreach", external: true },
+  { label: "Who We Are", href: "/about" },
+  { label: "Alumni", href: "/alumni" },
+  { label: "Founding & History", href: "/founding" },
+  { label: "Facilities", href: "/facilities" },
+  { label: "Outreach", href: "/outreach" },
 ];
 
 export default function Navbar() {
@@ -174,32 +174,26 @@ export default function Navbar() {
             onToggle={() => toggleDropdown("media")}
           />
 
-          <a
-            href="https://smallsat.uga.edu/research"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/research"
             className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
           >
             Publications
-          </a>
+          </Link>
 
-          <a
-            href="https://smallsat.uga.edu/software"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/software"
             className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
           >
             Software
-          </a>
+          </Link>
 
-          <a
-            href="https://smallsat.uga.edu/partners"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/partners"
             className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
           >
             Partners
-          </a>
+          </Link>
 
           <Dropdown
             label="Our Organization"
@@ -217,20 +211,18 @@ export default function Navbar() {
             Apply
           </a>
 
-          <a
-            href="https://smallsat.uga.edu/contact"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
           >
             Contact Us
-          </a>
+          </Link>
 
           <a
             href="https://gail.uga.edu/commit?search=90072000&desonly=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 lg:py-1 text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
+            className="px-3 py-1 lg:py-[0.6rem] rounded-[4px] bg-white text-black hover:bg-[#BA0C2F] font-semibold transition-colors"
           >
             Donate
           </a>

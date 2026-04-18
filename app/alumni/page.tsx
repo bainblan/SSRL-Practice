@@ -28,10 +28,7 @@ function ProfileCard({ member }: { member: Member }) {
         alt={member.name}
         className="h-[120px] w-[120px] rounded-full object-cover object-top mb-[10px]"
       />
-      <span
-        className="text-[#f4f4f4] text-center text-[14px] mx-[2px]"
-        style={{ fontFamily: "var(--font-montserrat), Montserrat, sans-serif" }}
-      >
+      <span className="text-[#f4f4f4] text-center text-[14px] mx-[2px]">
         {member.name}
       </span>
       {member.role && (
@@ -110,7 +107,6 @@ export default function AlumniPage() {
                     ? "text-[#10141e] bg-[#f4f4f4] rounded-[50px]"
                     : "text-[#f4f4f4] bg-transparent"
                 }`}
-                style={{ fontFamily: "var(--font-armata), Armata, sans-serif" }}
               >
                 {year}
               </button>

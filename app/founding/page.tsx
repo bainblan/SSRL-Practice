@@ -278,7 +278,7 @@ function TimelineNode({
         {entry.title}
       </h3>
       <div
-        className="p-[10px_15px] [&>p]:text-[#f6f6f6] [&_a]:font-[var(--font-lato)] [&_a]:text-[#007bff]! [&_a]:text-[12px] [&_a:hover]:text-[#0056b3] [&_a:hover]:underline"
+        className="p-[10px_15px] [&>p]:text-[#f6f6f6] [&_a]:text-[#007bff]! [&_a]:text-[12px] [&_a:hover]:text-[#0056b3] [&_a:hover]:underline"
         style={{ textAlign: isEven ? "left" : "right" }}
       >
         {entry.content}
