@@ -39,7 +39,7 @@ function Dropdown({
       <button
         onClick={onToggle}
         style={{ fontFamily: "var(--font-merriweather-sans)", fontSize: "12px" }}
-        className="flex items-center gap-1 px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+        className="flex items-center gap-1 px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
       >
         {label}
         <svg
@@ -155,14 +155,14 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Home
           </Link>
 
           <Link
             href="/missions"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Missions
           </Link>
@@ -176,21 +176,21 @@ export default function Navbar() {
 
           <Link
             href="/research"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Publications
           </Link>
 
           <Link
             href="/software"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Software
           </Link>
 
           <Link
             href="/partners"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Partners
           </Link>
@@ -206,14 +206,14 @@ export default function Navbar() {
             href="https://qualtricsxmfclnmhypx.qualtrics.com/jfe/form/SV_bqhBY8mdHZPuPEG"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Apply
           </a>
 
           <Link
             href="/contact"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(138,159,252,0.10)] hover:shadow-[0_0_0_2px_rgba(138,159,252,0.55),0_0_18px_rgba(138,159,252,0.25)] hover:-translate-y-[1px] transition-all"
+            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Contact Us
           </Link>
