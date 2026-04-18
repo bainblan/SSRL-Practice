@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const steps = [
   {
@@ -59,24 +59,6 @@ const layers = [
 
 export default function ComponentsSection() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [spreadHide, setSpreadHide] = useState(false);
-
-  useEffect(() => {
-    let timer: ReturnType<typeof setTimeout> | null = null;
-
-    if (currentStep === 5) {
-      setSpreadHide(false);
-      timer = setTimeout(() => {
-        setSpreadHide(true);
-      }, 1000);
-    } else {
-      setSpreadHide(false);
-    }
-
-    return () => {
-      if (timer) clearTimeout(timer);
-    };
-  }, [currentStep]);
 
   function getLayerClass(index: number) {
     let classes =
@@ -156,11 +138,6 @@ export default function ComponentsSection() {
       if (index === 9) transform = "translate(-50%, -80%) scale(1)";
       if (index === 10) transform = "translate(-50%, -20%) scale(1)";
       if (index === 11) transform = "translate(-50%, 10%) scale(1)";
-
-      opacity = spreadHide ? 0 : 1;
-      transition = spreadHide
-        ? "transform 3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 3s ease"
-        : "transform 3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0s linear";
     }
 
     return {
@@ -176,7 +153,7 @@ export default function ComponentsSection() {
       className="min-h-screen flex flex-col justify-center items-center text-center px-4 scroll-mt-10"
     >
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-4xl md:text-5xl mb-8">Anatomy of a CubeSat</h2>
+        <h2 className="text-5xl md:text-6xl mb-8">Anatomy of a CubeSat</h2>
 
         <div className="flex items-center justify-center gap-4 md:gap-12 w-full mb-8">
           <button

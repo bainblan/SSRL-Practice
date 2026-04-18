@@ -52,62 +52,65 @@
 
 /* === Global typography matching old master.css === */
 
-body {
-  font-family: var(--font-lato), "Lato", sans-serif;
-}
+@layer base {
+  body {
+    font-family: var(--font-lato), "Lato", sans-serif;
+  }
 
-a {
-  font-family: var(--font-armata), "Armata", sans-serif;
-  font-size: 12px;
-  text-decoration: none;
-}
+  a {
+    font-family: var(--font-armata), "Armata", sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-montserrat), "Montserrat", sans-serif;
-  color: #f6f6f6;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-montserrat), "Montserrat", sans-serif;
+    color: #f6f6f6;
+  }
 
-h1 {
-  font-size: 24px;
-}
+  h1 {
+    font-size: 24px;
+  }
 
-h2 {
-  font-size: 32px;
-}
+  h2 {
+    font-size: 32px;
+  }
 
-h3 {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.1;
-}
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
 
-h4 {
-  font-size: 80px;
-  font-weight: bold;
-}
+  h4 {
+    font-size: 80px;
+    font-weight: bold;
+  }
 
-h5 {
-  display: block;
-  font-size: 0.83em;
-  font-weight: bold;
-}
+  h5 {
+    display: block;
+    font-size: 0.83em;
+    font-weight: bold;
+  }
 
-p {
-  color: #f6f6f6;
-  font-size: 12px;
-}
+  p {
+    color: #f6f6f6;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 
-li {
-  color: #f6f6f6;
-}
+  li {
+    color: #f6f6f6;
+  }
 
-hr {
-  border-color: white;
+  hr {
+    border-color: white;
+  }
 }
 
 :root {

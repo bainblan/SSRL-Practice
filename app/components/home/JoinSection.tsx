@@ -5,7 +5,7 @@ export default function JoinSection() {
       className="min-h-screen flex flex-col justify-center items-center text-center border-b border-white/10 px-4 scroll-mt-10"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl mb-8">Join Us</h2>
+        <h2 className="text-5xl md:text-6xl mb-8">Join Us</h2>
         <p className="text-white/90">
           If you are a student with an interest in spacecraft, why don&apos;t you join us?
         </p>

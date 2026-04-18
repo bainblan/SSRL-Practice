@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { TypeAnimation } from 'react-type-animation';
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -31,16 +32,15 @@ export default function HeroSection() {
       planet.style.setProperty("--radius", `${radius}px`);
       planet.style.animationDuration = `${duration}s`;
       planet.style.animationDirection = direction;
-      planet.style.background = `linear-gradient(90deg, rgba(20,20,30,1) ${
-        phase - 30
-      }%, rgba(138, 159, 252, 0.4) ${phase}%, rgba(20,20,30,1) ${phase + 30}%)`;
+      planet.style.background = `linear-gradient(90deg, rgba(20,20,30,1) ${phase - 30
+        }%, rgba(138, 159, 252, 0.4) ${phase}%, rgba(20,20,30,1) ${phase + 30}%)`;
 
       container.appendChild(planet);
     }
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden text-center border-b border-white/10">
+    <section className="min-h-[calc(100vh-76px)] flex items-center justify-center relative overflow-hidden text-center border-b border-white/10">
       <style jsx>{`
         @keyframes orbit {
           from {
@@ -56,9 +56,24 @@ export default function HeroSection() {
 
       <div className="relative z-10 px-4">
         <h1 className="text-5xl md:text-7xl mb-4 leading-tight">
-          Step Into the{" "}
+          Step Into the Future of {" "}
           <span className="inline-block bg-white/10 px-[0.4em] py-[0.1em] border-l-2 border-[#8a9ffc]">
-            Future of Space
+            <TypeAnimation
+              sequence={[
+                'Space',
+                1000, 
+                'Innovation',
+                1000,
+                'Exceptionalism',
+                1000,
+                'Engineering',
+                1000
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ display: 'inline-block' }}
+              repeat={Infinity}
+            />
           </span>
         </h1>
 
