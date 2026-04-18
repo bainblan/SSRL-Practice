@@ -191,12 +191,12 @@ export default function ComponentsSection() {
           </button>
         </div>
 
-        <div>
+        <div className="relative">
           <div className="text-sm text-[#8a9ffc] mb-2 tracking-[2px]">
             <span>{currentStep + 1}</span> / 6
           </div>
-          <h3 className="text-2xl md:text-3xl mb-3">{steps[currentStep].title}</h3>
-          <p className="max-w-3xl mx-auto text-white/80 leading-8">
+          <h3 className="text-2xl md:text-3xl mb-3 pb-3">{steps[currentStep].title}</h3>
+          <p className="absolute left-1/2 -translate-x-1/2 top-full w-full max-w-3xl text-white/80 leading-6 px-4">
             {steps[currentStep].desc}
           </p>
         </div>
