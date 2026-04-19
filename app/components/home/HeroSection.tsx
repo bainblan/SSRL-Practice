@@ -32,8 +32,8 @@ export default function HeroSection() {
       planet.style.setProperty("--radius", `${radius}px`);
       planet.style.animationDuration = `${duration}s`;
       planet.style.animationDirection = direction;
-      planet.style.background = `linear-gradient(90deg, rgba(20,20,30,1) ${phase - 30
-        }%, rgba(138, 159, 252, 0.4) ${phase}%, rgba(20,20,30,1) ${phase + 30}%)`;
+      planet.style.background = `linear-gradient(90deg, rgba(45, 10, 18, 1) ${phase - 30
+        }%, rgba(186, 12, 47, 0.4) ${phase}%, rgba(45, 10, 18, 1) ${phase + 30}%)`;
 
       container.appendChild(planet);
     }
@@ -57,7 +57,7 @@ export default function HeroSection() {
       <div className="relative z-10 px-4">
         <h1 className="text-5xl md:text-7xl mb-4 leading-tight">
           Step Into the Future of {" "}
-          <span className="inline-block bg-white/10 px-[0.4em] py-[0.1em] border-l-2 border-[#8a9ffc]">
+          <span className="inline-block bg-white/10 px-[0.4em] py-[0.1em] border-l-2 border-[#BA0C2F]">
             <TypeAnimation
               sequence={[
                 'Space',

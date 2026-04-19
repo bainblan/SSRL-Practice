@@ -157,7 +157,7 @@ export default function ComponentsSection() {
 
         <div className="flex items-center justify-center gap-4 md:gap-12 w-full mb-8">
           <button
-            className="border border-[#8a9ffc] text-[#8a9ffc] text-2xl w-12 h-12 rounded-full hover:bg-[#8a9ffc] hover:text-[#050508] transition hover:shadow-[0_0_15px_#8a9ffc] shrink-0"
+            className="border border-[#BA0C2F] text-[#BA0C2F] text-2xl w-12 h-12 rounded-full hover:bg-[#BA0C2F] hover:text-[#050508] transition hover:shadow-[0_0_15px_#BA0C2F] shrink-0"
             onClick={() =>
               setCurrentStep((prev) => (prev > 0 ? prev - 1 : steps.length - 1))
             }
@@ -181,7 +181,7 @@ export default function ComponentsSection() {
           </div>
 
           <button
-            className="border border-[#8a9ffc] text-[#8a9ffc] text-2xl w-12 h-12 rounded-full hover:bg-[#8a9ffc] hover:text-[#050508] transition hover:shadow-[0_0_15px_#8a9ffc] shrink-0"
+            className="border border-[#BA0C2F] text-[#BA0C2F] text-2xl w-12 h-12 rounded-full hover:bg-[#BA0C2F] hover:text-[#050508] transition hover:shadow-[0_0_15px_#BA0C2F] shrink-0"
             onClick={() =>
               setCurrentStep((prev) => (prev < steps.length - 1 ? prev + 1 : 0))
             }
@@ -192,7 +192,7 @@ export default function ComponentsSection() {
         </div>
 
         <div className="relative">
-          <div className="text-sm text-[#8a9ffc] mb-2 tracking-[2px]">
+          <div className="text-sm text-[#BA0C2F] mb-2 tracking-[2px]">
             <span>{currentStep + 1}</span> / 6
           </div>
           <h3 className="text-2xl md:text-3xl mb-3 pb-3">{steps[currentStep].title}</h3>
