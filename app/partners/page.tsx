@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { StarfieldBackground } from "@/components/ui/starfield";
 
 interface Partner {
   name: string;
@@ -64,7 +65,7 @@ const partners: Partner[] = [
     description:
       "SSRL is working with APL on advancing advanced processors in the space environment",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/JHU_APL_logo.png/440px-JHU_APL_logo.png",
+      "/images/logos/realjhapl.jpg",
     href: "https://www.jhuapl.edu/",
   },
   {
@@ -76,7 +77,7 @@ const partners: Partner[] = [
   },
 ];
 
-function PartnerCard({ partner }: { partner: Partner }) {
+function PartnerCard({ partner, className = "" }: { partner: Partner; className?: string }) {
   const isExternal = partner.image.startsWith("http");
 
   return (
@@ -84,7 +85,7 @@ function PartnerCard({ partner }: { partner: Partner }) {
       href={partner.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="block no-underline group w-[250px] h-[350px]"
+      className={`block no-underline group w-[250px] h-[350px] ${className}`}
       style={{ perspective: "1000px" }}
     >
       <div
@@ -114,10 +115,6 @@ function PartnerCard({ partner }: { partner: Partner }) {
             )}
           </div>
 
-          {/* "Learn More" label */}
-          <div className="absolute bottom-8 left-8 border-l-[6px] border-[rgb(238,196,90)] py-[5px] px-[5px] z-10">
-            <strong className="text-black text-[12px]">Learn More</strong>
-          </div>
         </div>
 
         {/* Back — description */}
@@ -146,6 +143,7 @@ function PartnerCard({ partner }: { partner: Partner }) {
 export default function PartnersPage() {
   return (
     <>
+      <StarfieldBackground className="-z-10" />
       <section className="relative z-10 max-w-[1140px] mx-auto px-4 pt-4 pb-8">
       <Image
         src="/images/logos/ssrl_logo_long-new.png"
@@ -161,9 +159,17 @@ export default function PartnersPage() {
       </h1>
 
       {/* 3-column grid matching original partner-grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
-        {partners.map((partner) => (
-          <PartnerCard key={partner.name} partner={partner} />
+      <div className="grid grid-cols-1 md:grid-cols-[repeat(3,250px)] gap-8 justify-center">
+        {partners.map((partner, index) => (
+          <PartnerCard
+            key={partner.name}
+            partner={partner}
+            className={
+              index === partners.length - 1 && partners.length % 3 === 1
+                ? "md:col-start-2"
+                : ""
+            }
+          />
         ))}
       </div>
       </section>

@@ -7,10 +7,6 @@ interface ContactPerson {
 const contacts: ContactPerson[] = [
   { role: "Principal Investigator", name: "Dr. Deepak Mishra", email: "dmishra@uga.edu" },
   { role: "Lab Manager", name: "Sydney Whilden", email: "sydney.whilden25@uga.edu" },
-  { role: "MOCI Chief Engineer", name: "Ryan Hughes", email: "ryanhughes@uga.edu" },
-  { role: "MOCI Program Manager", name: "Lee Tran", email: "lee.tran@uga.edu" },
-  { role: "MEMESat-1 Chief Engineer", name: "Isaac Garon", email: "isaac.garon@uga.edu" },
-  { role: "MEMESat-1 Program Manager", name: "Aiden Hammond", email: "aiden.hammond@uga.edu" },
   { role: "General Inquiries", name: "Lab Contact", email: "ssrluga@uga.edu" },
 ];
 
