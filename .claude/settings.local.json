@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(npm run:*)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "Bash(ffmpeg -version)",
+      "Bash(where.exe ffmpeg *)",
+      "Read(//c/ProgramData/chocolatey/bin/**)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/baine/AppData/Local/Microsoft/WinGet/Packages/**)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
