@@ -43,9 +43,15 @@ export function StarfieldBackground({
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    const rect = container.getBoundingClientRect()
-    let width = rect.width
-    let height = rect.height
+    const readSize = () => {
+      const rect = container.getBoundingClientRect()
+      return {
+        w: rect.width || window.innerWidth,
+        h: rect.height || window.innerHeight,
+      }
+    }
+
+    let { w: width, h: height } = readSize()
     canvas.width = width
     canvas.height = height
 
@@ -69,15 +75,24 @@ export function StarfieldBackground({
 
     // Resize handler
     const handleResize = () => {
-      const rect = container.getBoundingClientRect()
-      width = rect.width
-      height = rect.height
+      const size = readSize()
+      width = size.w
+      height = size.h
       canvas.width = width
       canvas.height = height
     }
 
     const ro = new ResizeObserver(handleResize)
     ro.observe(container)
+    window.addEventListener("resize", handleResize)
+
+    // If the container measured 0 on first pass, re-seed stars once we have a real size
+    if (width < 2 || height < 2) {
+      requestAnimationFrame(() => {
+        handleResize()
+        for (let i = 0; i < stars.length; i++) stars[i] = createStar()
+      })
+    }
 
     // Animation
     const animate = () => {
@@ -154,6 +169,7 @@ export function StarfieldBackground({
     return () => {
       cancelAnimationFrame(animationId)
       ro.disconnect()
+      window.removeEventListener("resize", handleResize)
     }
   }, [count, speed, starColor, twinkle])
 

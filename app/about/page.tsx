@@ -130,26 +130,37 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero banner */}
-      <div
-        className="w-full bg-cover bg-center"
-        style={{ backgroundImage: "url(/images/SSRLProfiles/team-bigteamfam.png)" }}
-      >
-        <div className="flex justify-center items-center h-[475px] bg-black/75 px-10">
-          <p className="text-[#f4f4f4] text-[16px] leading-[24px] max-w-[900px] text-left">
-            In 2015, 3 students at the University of Georgia set out to build a
-            spacecraft funded by Kickstarter. They reached out to faculty and
-            received funding NASA and the Air Force.
-            <br /><br />
-            The Small Satellite Research Laboratory was founded in 2016 with 8
-            faculty and 15 undergraduate students. The lab is now building two
-            cubesats for Low Earth Orbit and contains over 50 undergraduate
-            students, 5 graduate students, and 12 faculty. The Small Satellite
-            Research Laboratory had its first satellite, SPOC, deployed from the
-            International Space Station in 2020.
-            <br /><br />
-            <Link href="/missions" className="text-[16px]! leading-[24px]">Learn More</Link>
-          </p>
+      <div className="relative w-full h-[calc(100vh-76px)] overflow-hidden">
+        <video
+          src="/images/ssrl_whoweare.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto"
+        />
+        <div className="relative flex justify-center items-center w-full h-full px-10">
+          <h1 className="text-[#f4f4f4] text-6xl md:text-7xl lg:text-8xl font-bold text-center">
+            Who We Are
+          </h1>
         </div>
+      </div>
+
+      <div className="flex justify-center px-10 py-10">
+        <p className="text-[#f4f4f4] text-[16px] leading-[24px] max-w-[900px] text-left">
+          In 2015, 3 students at the University of Georgia set out to build a
+          spacecraft funded by Kickstarter. They reached out to faculty and
+          received funding NASA and the Air Force.
+          <br /><br />
+          The Small Satellite Research Laboratory was founded in 2016 with 8
+          faculty and 15 undergraduate students. The lab is now building two
+          cubesats for Low Earth Orbit and contains over 50 undergraduate
+          students, 5 graduate students, and 12 faculty. The Small Satellite
+          Research Laboratory had its first satellite, SPOC, deployed from the
+          International Space Station in 2020.
+          <br /><br />
+          <Link href="/missions" className="text-[16px]! leading-[24px]">Learn More</Link>
+        </p>
       </div>
 
       <br />

@@ -15,7 +15,7 @@ interface SoftwareItemProps {
   thumbnail: string;
   title: string;
   subtitle: string;
-  description: string;
+  description: string[];
   version: string;
   licence: { label: string; href: string };
   binaries: SoftwareSection;
@@ -43,7 +43,7 @@ function IconPrefix({ icon }: { icon?: "github" | "gitlab" }) {
 function SoftwareLinkList({ section }: { section: SoftwareSection }) {
   return (
     <div>
-      <span className="text-[#6dcbd8] text-[1.1rem] pl-[0.1rem]">
+      <span className="text-[#BA0C2F] text-[1.1rem] pl-[0.1rem]">
         {section.title}
       </span>
       <hr className="border-white my-2" />
@@ -55,7 +55,7 @@ function SoftwareLinkList({ section }: { section: SoftwareSection }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#6dcbd8] hover:text-[#9ee0ea] transition-colors"
+                className="text-[#BA0C2F] hover:text-[#e8425f] transition-colors"
               >
                 <IconPrefix icon={link.icon} />
                 {link.label}
@@ -86,7 +86,7 @@ function SoftwareItem({
   research,
 }: SoftwareItemProps) {
   return (
-    <div className="w-full bg-[#072027] shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)] my-2 p-4">
+    <div className="w-full bg-[#1a0710] shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)] my-2 p-4">
       {/* Top row: thumbnail + title */}
       <div className="flex flex-col md:flex-row gap-4 mb-4">
         <div className="shrink-0">
@@ -95,13 +95,13 @@ function SoftwareItem({
             alt={title}
             width={150}
             height={150}
-            className="border-2 border-[#f3e22f] bg-[#f3e22f] p-[0.25rem]"
+            className="border-2 border-[#BA0C2F] bg-[#BA0C2F] p-[0.25rem]"
             unoptimized
           />
         </div>
         <div>
-          <div className="text-[#6dcbd8] text-[1.8rem] pl-2">{title}</div>
-          <div className="text-[#6dcbd8] text-[1.1rem] pl-[0.1rem]">
+          <div className="text-[#BA0C2F] text-[1.8rem] pl-2">{title}</div>
+          <div className="text-[#BA0C2F] text-[1.1rem] pl-[0.1rem]">
             {subtitle}
           </div>
         </div>
@@ -110,7 +110,11 @@ function SoftwareItem({
       {/* Description + status */}
       <div className="flex flex-col md:flex-row gap-4 p-2 mb-4">
         <div className="md:w-3/4">
-          <p>{description}</p>
+          <ul className="list-disc pl-5 space-y-1">
+            {description.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
         </div>
         <div className="md:w-1/4">
           <ul className="list-none p-0 m-0 text-[0.8rem]">
@@ -121,7 +125,7 @@ function SoftwareItem({
                 href={licence.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#6dcbd8]"
+                className="text-[#BA0C2F]"
               >
                 {licence.label}
               </a>
@@ -154,7 +158,14 @@ export default function SoftwarePage() {
         thumbnail="/images/documents/thumbnails/adamsThesis.png"
         title="SSRLCV"
         subtitle="Small Satellite Research Laboratory Computer Vision"
-        description="Small Satellite Research Laboratory Computer Vision, SSRLCV, is a computer vision software library written in C++ and the Nvidia CUDA programming language for Nvidia GPU SoCs in space environments. The software will be used onboard the MOCI satellite with our modified TX2i, but is also compatible with Ubuntu 16.04, Ubuntu 18.04, and Linux for Tegra. SSRLCV can also run on the TX2 and the Jetson Nano. The software currently includes SIFT feature detection, SIFT feature generation, SIFT feature matching, point cloud filtering, 2 view triangulation, N view triangulation, and 2 view bundle adjustment."
+        description={[
+          "Computer vision software library written in C++ and the Nvidia CUDA programming language for Nvidia GPU SoCs in space environments.",
+          "Will be used onboard the MOCI satellite with our modified TX2i.",
+          "Compatible with Ubuntu 16.04, Ubuntu 18.04, and Linux for Tegra.",
+          "Also runs on the TX2 and the Jetson Nano.",
+          "Includes SIFT feature detection, generation, and matching.",
+          "Includes point cloud filtering, 2-view and N-view triangulation, and 2-view bundle adjustment.",
+        ]}
         version="0.1"
         licence={{ label: "LGPLv3", href: "https://www.gnu.org/licenses/lgpl-3.0.en.html" }}
         binaries={{
@@ -196,7 +207,12 @@ export default function SoftwarePage() {
         thumbnail="/images/documents/thumbnails/Adams-etal-Art_Gallery_w_Small_Sats-1.png"
         title="SSRL Swarm Net"
         subtitle="Small Satellite Research Laboratory Swarm Network"
-        description="Small Satellite Research Laboratory Swarm Network is a proof of concept satellite swarm manager designed for Nvidia GPU SoCs on flat-sat prototypes. SSRL Swarm Net uses an IP stack to distribute agent state data over a multicast capable network and transfers data from peer to peer. The software is compatible with POSIX compliant systems."
+        description={[
+          "Proof-of-concept satellite swarm manager designed for Nvidia GPU SoCs on flat-sat prototypes.",
+          "Uses an IP stack to distribute agent state data over a multicast-capable network.",
+          "Transfers data peer-to-peer.",
+          "Compatible with POSIX-compliant systems.",
+        ]}
         version="0.1"
         licence={{ label: "LGPLv3", href: "https://www.gnu.org/licenses/lgpl-3.0.en.html" }}
         binaries={{

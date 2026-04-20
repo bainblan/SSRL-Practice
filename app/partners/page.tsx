@@ -143,7 +143,7 @@ function PartnerCard({ partner, className = "" }: { partner: Partner; className?
 export default function PartnersPage() {
   return (
     <>
-      <StarfieldBackground className="-z-10" />
+      <StarfieldBackground />
       <section className="relative z-10 max-w-[1140px] mx-auto px-4 pt-4 pb-8">
       <Image
         src="/images/logos/ssrl_logo_long-new.png"
