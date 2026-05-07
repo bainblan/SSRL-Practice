@@ -54,11 +54,11 @@ export default function HeroSection() {
       <div ref={containerRef} className="absolute inset-0 z-[1]" />
 
       <div className="relative z-10 px-4">
-        <h1 className="text-5xl md:text-8xl mb-4 leading-tight">
+        <h1 className="text-5xl md:text-8xl mb-4 leading-tight animate-in fade-in slide-in-from-top-8 duration-1000 fill-mode-both">
           Welcome to the SSRL
         </h1>
 
-        <p className="text-lg md:text-xl max-w-[600px] mx-auto text-white/80">
+        <p className="text-lg md:text-xl max-w-[600px] mx-auto text-white/80 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
           The Small Satellite Research Laboratory is developing and launching new and
           innovative technologies into space by utilizing the CubeSat platform.
         </p>
