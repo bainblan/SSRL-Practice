@@ -157,7 +157,7 @@ export default function ComponentsSection() {
 
         <div className="flex items-center justify-center gap-4 md:gap-12 w-full mb-8">
           <button
-            className="cursor-pointer border border-[#BA0C2F] text-[#BA0C2F] text-2xl w-12 h-12 rounded-full hover:bg-[#BA0C2F] hover:text-[#050508] transition hover:shadow-[0_0_15px_#BA0C2F] shrink-0"
+            className="cursor-pointer border border-[#ff2d5c] text-[#ff2d5c] text-2xl w-12 h-12 rounded-full shadow-[0_0_15px_rgba(255,45,92,0.6)] [text-shadow:0_0_8px_rgba(255,45,92,0.9)] hover:bg-[#ff2d5c] hover:text-[#050508] hover:shadow-[0_0_25px_#ff2d5c] transition shrink-0"
             onClick={() =>
               setCurrentStep((prev) => (prev > 0 ? prev - 1 : steps.length - 1))
             }
@@ -181,7 +181,7 @@ export default function ComponentsSection() {
           </div>
 
           <button
-            className="cursor-pointer border border-[#BA0C2F] text-[#BA0C2F] text-2xl w-12 h-12 rounded-full hover:bg-[#BA0C2F] hover:text-[#050508] transition hover:shadow-[0_0_15px_#BA0C2F] shrink-0"
+            className="cursor-pointer border border-[#ff2d5c] text-[#ff2d5c] text-2xl w-12 h-12 rounded-full shadow-[0_0_15px_rgba(255,45,92,0.6)] [text-shadow:0_0_8px_rgba(255,45,92,0.9)] hover:bg-[#ff2d5c] hover:text-[#050508] hover:shadow-[0_0_25px_#ff2d5c] transition shrink-0"
             onClick={() =>
               setCurrentStep((prev) => (prev < steps.length - 1 ? prev + 1 : 0))
             }
@@ -192,7 +192,7 @@ export default function ComponentsSection() {
         </div>
 
         <div className="relative">
-          <div className="text-sm text-[#BA0C2F] mb-2 tracking-[2px]">
+          <div className="text-sm mb-2 tracking-[2px] text-[#ff2d5c] [text-shadow:0_0_10px_rgba(255,45,92,0.9),0_0_20px_rgba(186,12,47,0.6)]">
             <span>{currentStep + 1}</span> / 6
           </div>
           <h3 className="text-2xl md:text-3xl mb-3 pb-3">{steps[currentStep].title}</h3>

@@ -14,7 +14,7 @@ export default function JoinSection() {
           href="https://qualtricsxmfclnmhypx.qualtrics.com/jfe/form/SV_bqhBY8mdHZPuPEG"
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer inline-block text-lg mt-8 px-10 py-4 bg-[#BA0C2F] text-[#050508] font-bold rounded-[5px] transition hover:bg-[#FFFFFF] hover:-translate-y-1"
+          className="cursor-pointer inline-block text-lg mt-8 px-10 py-4 bg-[#BA0C2F] text-white font-bold rounded-[5px] shadow-[0_0_20px_rgba(186,12,47,0.5)] transition hover:bg-white hover:text-[#BA0C2F] hover:-translate-y-1"
         >
           Apply to the Lab
         </a>
