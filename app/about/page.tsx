@@ -60,7 +60,7 @@ function ProfileCard({ member }: { member: Member }) {
 
   if (member.link) {
     return (
-      <a href={member.link} target="_blank" rel="noopener noreferrer" className="no-underline">
+      <a href={member.link} target="_blank" rel="noopener noreferrer" className="cursor-pointer no-underline">
         {card}
       </a>
     );
@@ -159,7 +159,7 @@ export default function AboutPage() {
           Research Laboratory had its first satellite, SPOC, deployed from the
           International Space Station in 2020.
           <br /><br />
-          <Link href="/missions" className="text-[16px]! leading-[24px]">Learn More</Link>
+          <Link href="/missions" className="cursor-pointer text-[16px]! leading-[24px]">Learn More</Link>
         </p>
       </div>
 

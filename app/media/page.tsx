@@ -30,7 +30,7 @@ function SmallPodcastCard({ podcast }: { podcast: Podcast }) {
           href={podcast.spotifylink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#1db954]! font-bold no-underline text-[12px]"
+          className="cursor-pointer text-[#1db954]! font-bold no-underline text-[12px]"
         >
           Listen on Spotify
         </a>
@@ -400,7 +400,7 @@ export default function MediaPage() {
             href="https://www.youtube.com/@ugassrl"
             target="_blank"
             rel="noopener noreferrer"
-            className="block"
+            className="cursor-pointer block"
           >
             <img
               src="/images/media/ytscreenshot.png"

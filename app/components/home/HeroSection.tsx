@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { TypeAnimation } from 'react-type-animation';
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -55,26 +54,8 @@ export default function HeroSection() {
       <div ref={containerRef} className="absolute inset-0 z-[1]" />
 
       <div className="relative z-10 px-4">
-        <h1 className="text-5xl md:text-7xl mb-4 leading-tight">
-          Step Into the Future of {" "}
-          <span className="inline-block bg-white/10 px-[0.4em] py-[0.1em] border-l-2 border-[#BA0C2F]">
-            <TypeAnimation
-              sequence={[
-                'Space',
-                1000, 
-                'Innovation',
-                1000,
-                'Exceptionalism',
-                1000,
-                'Engineering',
-                1000
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{ display: 'inline-block' }}
-              repeat={Infinity}
-            />
-          </span>
+        <h1 className="text-5xl md:text-8xl mb-4 leading-tight">
+          Welcome to the SSRL
         </h1>
 
         <p className="text-lg md:text-xl max-w-[600px] mx-auto text-white/80">

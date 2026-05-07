@@ -69,7 +69,7 @@ export default function Footer() {
                       <li key={link.label} className="py-[5px] leading-none list-none">
                         <Component
                           href={link.href}
-                          className="text-[#dae9f4]/50 hover:text-[#BA0C2F] text-xs font-bold transition-colors"
+                          className="cursor-pointer text-[#dae9f4]/50 hover:text-[#BA0C2F] text-xs font-bold transition-colors"
                           {...extraProps}
                         >
                           {link.label}
@@ -90,7 +90,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#dae9f4] hover:text-[#BA0C2F] transition-colors"
+                className="cursor-pointer text-[#dae9f4] hover:text-[#BA0C2F] transition-colors"
                 aria-label={social.label}
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

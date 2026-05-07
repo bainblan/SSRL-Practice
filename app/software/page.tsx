@@ -55,7 +55,7 @@ function SoftwareLinkList({ section }: { section: SoftwareSection }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#BA0C2F] hover:text-[#e8425f] transition-colors"
+                className="cursor-pointer text-[#BA0C2F] hover:text-[#e8425f] transition-colors"
               >
                 <IconPrefix icon={link.icon} />
                 {link.label}
@@ -125,7 +125,7 @@ function SoftwareItem({
                 href={licence.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#BA0C2F]"
+                className="cursor-pointer text-[#BA0C2F]"
               >
                 {licence.label}
               </a>

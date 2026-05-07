@@ -85,7 +85,7 @@ function PartnerCard({ partner, className = "" }: { partner: Partner; className?
       href={partner.href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`block no-underline group w-[250px] h-[350px] ${className}`}
+      className={`cursor-pointer block no-underline group w-[250px] h-[350px] ${className}`}
       style={{ perspective: "1000px" }}
     >
       <div

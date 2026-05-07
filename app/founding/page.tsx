@@ -11,7 +11,7 @@ const timelineData: TimelineEntry[] = [
     content: (
       <p>
         A team of UGA Students, lead by{" "}
-        <a href="http://calebadams.space" target="_blank" rel="noopener noreferrer">Caleb Adams</a>,
+        <a href="http://calebadams.space" target="_blank" rel="noopener noreferrer" className="cursor-pointer">Caleb Adams</a>,
         place first at Virgina Tech hacks and become the first team from UGA to
         win an MLH Hackathon. They designed and built a low cost remote operated
         telescope. Members of this team would later go on to begin the annual
@@ -26,13 +26,13 @@ const timelineData: TimelineEntry[] = [
       <p>
         The company Spacey Sciences LLC was formed out of the UGA
         Entrepreneurship program. The company consisted of{" "}
-        <a href="http://calebadams.space" target="_blank" rel="noopener noreferrer">Caleb Adams</a>,
+        <a href="http://calebadams.space" target="_blank" rel="noopener noreferrer" className="cursor-pointer">Caleb Adams</a>,
         Nicholas (Hollis) Neel, Kenny Cochran, and Ryan Babaie. The goal of the
         organization was to launch a small satellite into space. The plan was to
         fund this venture through a combiniation of smart-telescope sales and a
         kickstarter. The organization saw some early success with the development
         of{" "}
-        <a href="https://news.uga.edu/looking-to-space/" target="_blank" rel="noopener noreferrer">
+        <a href="https://news.uga.edu/looking-to-space/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
           the Spacey Smart Telescope.
         </a>{" "}
         The company would go on to sell several prototype units before
@@ -46,11 +46,11 @@ const timelineData: TimelineEntry[] = [
     content: (
       <p>
         UGA Researchers and Faculty{" "}
-        <a href="https://geography.uga.edu/directory/people/deepak-r-mishra" target="_blank" rel="noopener noreferrer">
+        <a href="https://geography.uga.edu/directory/people/deepak-r-mishra" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
           Dr. Deepak Mishra
         </a>{" "}
         and{" "}
-        <a href="https://engineering.uga.edu/team_member/david-cotten/" target="_blank" rel="noopener noreferrer">
+        <a href="https://engineering.uga.edu/team_member/david-cotten/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
           Dr. David Cotten
         </a>{" "}
         met with meet with NASA Astronaut Mary Cleave about building a satellite
@@ -115,15 +115,15 @@ const timelineData: TimelineEntry[] = [
           Spacey Sciences LLC dissolves in favor of becoming UGA SSRL, the Small
           Satellite Research Lab. The Faculty and Students join together into a
           united front.{" "}
-          <a href="http://calebadams.space" target="_blank" rel="noopener noreferrer">Caleb Adams</a>,
+          <a href="http://calebadams.space" target="_blank" rel="noopener noreferrer" className="cursor-pointer">Caleb Adams</a>,
           from Spacey Science, becomes Program Manager.{" "}
-          <a href="https://engineering.uga.edu/team_member/david-cotten/" target="_blank" rel="noopener noreferrer">
+          <a href="https://engineering.uga.edu/team_member/david-cotten/" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
             Dr. David Cotten
           </a>{" "}
           becomes the Associate Director, Principal Investigator of the MOCI
           satellite, Co-Principal Investigator of the SPOC Satellite, and Lab
           Supervisor.{" "}
-          <a href="https://geography.uga.edu/directory/people/deepak-r-mishra" target="_blank" rel="noopener noreferrer">
+          <a href="https://geography.uga.edu/directory/people/deepak-r-mishra" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
             Dr. Deepak Mishra
           </a>{" "}
           becomes the Director and Principal Investigator of the SPOC Satellite.
@@ -147,7 +147,7 @@ const timelineData: TimelineEntry[] = [
     content: (
       <p>
         The UGA SSRL signs a Space Act agreement with the{" "}
-        <a href="https://www.nasa.gov/ames" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.nasa.gov/ames" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
           NASA Ames Research Center
         </a>
         . This allows the lab access to NASA resources and researchers.
@@ -209,7 +209,7 @@ const timelineData: TimelineEntry[] = [
     content: (
       <p>
         The UGA SSRL renews its partnership with the{" "}
-        <a href="https://www.nasa.gov/ames" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.nasa.gov/ames" target="_blank" rel="noopener noreferrer" className="cursor-pointer">
           NASA Ames Research Center
         </a>
         .

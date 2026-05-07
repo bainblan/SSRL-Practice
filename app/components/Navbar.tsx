@@ -39,7 +39,7 @@ function Dropdown({
       <button
         onClick={onToggle}
         style={{ fontFamily: "var(--font-merriweather-sans)", fontSize: "12px" }}
-        className="flex items-center gap-1 px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
+        className="cursor-pointer flex items-center gap-1 px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
       >
         {label}
         <svg
@@ -66,7 +66,7 @@ function Dropdown({
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                className="cursor-pointer block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 onClick={onToggle}
               >
                 {item.label}
@@ -75,7 +75,7 @@ function Dropdown({
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                className="cursor-pointer block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 onClick={onToggle}
               >
                 {item.label}
@@ -113,7 +113,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-black/70 backdrop-blur-sm">
       <div className="max-w-[1140px] mx-auto flex items-center justify-between h-[76px] px-4">
         {/* Logo */}
-        <Link href="/" className="shrink-0">
+        <Link href="/" className="cursor-pointer shrink-0">
           <Image
             src="/images/logos/ssrl.svg"
             alt="SSRL Logo"
@@ -125,7 +125,7 @@ export default function Navbar() {
         </Link>
 
         <button
-          className="lg:hidden text-[#8a9ffc] p-2"
+          className="cursor-pointer lg:hidden text-[#8a9ffc] p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
         >
@@ -155,14 +155,14 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
+            className="cursor-pointer px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Home
           </Link>
 
           <Link
             href="/missions"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
+            className="cursor-pointer px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Missions
           </Link>
@@ -176,21 +176,21 @@ export default function Navbar() {
 
           <Link
             href="/research"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
+            className="cursor-pointer px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Publications
           </Link>
 
           <Link
             href="/software"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
+            className="cursor-pointer px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Software
           </Link>
 
           <Link
             href="/partners"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
+            className="cursor-pointer px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Partners
           </Link>
@@ -206,14 +206,14 @@ export default function Navbar() {
             href="https://qualtricsxmfclnmhypx.qualtrics.com/jfe/form/SV_bqhBY8mdHZPuPEG"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
+            className="cursor-pointer px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Apply
           </a>
 
           <Link
             href="/contact"
-            className="px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
+            className="cursor-pointer px-4 py-2 lg:py-[0.6rem] rounded-full text-gray-400 hover:text-white hover:bg-[rgba(186,12,47,0.25)] hover:shadow-[0_0_0_2px_rgba(186,12,47,0.9),0_0_22px_rgba(186,12,47,0.55)] hover:-translate-y-[1px] transition-all"
           >
             Contact Us
           </Link>
@@ -222,7 +222,7 @@ export default function Navbar() {
             href="https://gail.uga.edu/commit?search=90072000&desonly=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1 lg:py-[0.6rem] rounded-[4px] bg-white text-black hover:bg-[#BA0C2F] font-semibold transition-colors"
+            className="cursor-pointer px-3 py-1 lg:py-[0.6rem] rounded-[4px] bg-white text-black hover:bg-[#BA0C2F] font-semibold transition-colors"
           >
             Donate
           </a>

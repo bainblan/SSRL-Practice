@@ -45,7 +45,7 @@ function DocumentCard({ item }: { item: ResearchItem }) {
       href={item.src.startsWith("/") ? item.src : `/${item.src}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex w-full bg-white shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)] hover:shadow-[0_4px_8px_0px_rgba(0,0,0,0.4)] active:shadow-[0_1px_1px_0_rgba(0,0,0,0.5)] transition-shadow my-2 no-underline"
+      className="cursor-pointer flex w-full bg-white shadow-[0_2px_4px_0px_rgba(0,0,0,0.4)] hover:shadow-[0_4px_8px_0px_rgba(0,0,0,0.4)] active:shadow-[0_1px_1px_0_rgba(0,0,0,0.5)] transition-shadow my-2 no-underline"
     >
       <div className="flex">
         {/* Thumbnail — hidden on mobile */}

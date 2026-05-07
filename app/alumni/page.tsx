@@ -41,7 +41,7 @@ function ProfileCard({ member }: { member: Member }) {
 
   if (member.link) {
     return (
-      <a href={member.link} target="_blank" rel="noopener noreferrer" className="no-underline">
+      <a href={member.link} target="_blank" rel="noopener noreferrer" className="cursor-pointer no-underline">
         {card}
       </a>
     );

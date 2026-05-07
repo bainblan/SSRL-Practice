@@ -59,6 +59,7 @@ export default function FacilitiesPage() {
               href="/images/documents/presentations/UGAWorkshop2017CubeSatDeveloper.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              className="cursor-pointer"
             >
               SPOCeye
             </a>{" "}
@@ -67,6 +68,7 @@ export default function FacilitiesPage() {
               href="/images/documents/presentations/SPOC_Design_Review.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              className="cursor-pointer"
             >
               SPOC satellite
             </a>
@@ -161,6 +163,7 @@ export default function FacilitiesPage() {
               href="/images/documents/presentations/SPOC_Design_Review.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              className="cursor-pointer"
             >
               SPOC
             </a>
@@ -169,6 +172,7 @@ export default function FacilitiesPage() {
               href="/images/documents/presentations/MOCI_Software_Demo2018.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              className="cursor-pointer"
             >
               MOCI
             </a>
