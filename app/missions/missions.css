@@ -8,7 +8,6 @@ body {
   padding: 0;
   background-color: #000;
   color: white;
-  font-family: "Times New Roman", serif;
 }
 
 .missions-page-root {
@@ -151,14 +150,13 @@ body {
 
 .main-title {
   font-size: 6.5rem;
-  font-weight: normal;
+  font-weight: 700;
   margin: 0;
   letter-spacing: 12px;
 }
 
 .main-title em {
   font-style: italic;
-  font-family: Georgia, serif;
 }
 
 .top-text {
@@ -211,7 +209,7 @@ body {
 .mission-header h2 {
   font-size: 5rem;
   margin: 0;
-  font-weight: normal;
+  font-weight: 700;
   letter-spacing: 4px;
 }
 
@@ -276,7 +274,6 @@ body {
 }
 
 .research-item span {
-  font-family: Georgia, serif;
   font-style: italic;
   color: rgba(255, 255, 255, 0.3);
   margin-right: 20px;
