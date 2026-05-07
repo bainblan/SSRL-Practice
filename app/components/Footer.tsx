@@ -44,7 +44,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="pb-8">
+    <footer className="relative z-10 pb-8">
       <div className="max-w-[1140px] mx-auto px-4">
         {/* White hr matching original */}
         <hr className="border-white mb-6" />
