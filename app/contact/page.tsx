@@ -23,7 +23,7 @@ export default function ContactPage() {
             height="450"
             frameBorder="0"
             style={{ border: 0 }}
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAQA59VHUySY5niNcvw3qrZg9Q9rF0qEeo&q=Sanford+Dr+,Athens+,GA+30602+,USA"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAQA59VHUySY5niNcvw3qrZg9Q9rF0qEeo&q=UGA+Physics+Building,Athens,GA+30602"
             allowFullScreen
           />
           <address className="mt-2">
