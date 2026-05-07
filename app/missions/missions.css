@@ -180,7 +180,7 @@ body {
   transform: rotate(180deg);
   font-size: 0.75rem;
   letter-spacing: 5px;
-  opacity: 0.4;
+  color: #fff;
 }
 
 .mission-content {
