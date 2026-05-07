@@ -139,6 +139,7 @@ export default function AboutPage() {
           playsInline
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto"
         />
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
         <div className="relative flex justify-center items-center w-full h-full px-10">
           <h1 className="text-[#f4f4f4] text-6xl md:text-7xl lg:text-8xl font-bold text-center">
             Who We Are
@@ -231,16 +232,16 @@ export default function AboutPage() {
         <h4 className="text-[#f4f4f4] text-[35px] m-[10px] pb-[5px]">Undergraduate Students</h4>
 
         {/* Tabbed carousel */}
-        <div className="border-2 border-[goldenrod]">
+        <div className="border-2 border-[#BA0C2F]">
           {/* Tab buttons */}
           <div className="flex">
             {tabs.map((tab, i) => (
               <button
                 key={tab.label}
                 onClick={() => setActiveTab(i)}
-                className="flex-1 py-[14px] px-[16px] text-[17px] text-white border-2 border-[goldenrod] cursor-pointer transition-colors"
+                className="flex-1 py-[14px] px-[16px] text-[17px] text-white border-2 border-[#BA0C2F] cursor-pointer transition-colors"
                 style={{
-                  backgroundColor: i === activeTab ? "goldenrod" : "gray",
+                  backgroundColor: i === activeTab ? "#BA0C2F" : "gray",
                 }}
               >
                 {tab.label}
