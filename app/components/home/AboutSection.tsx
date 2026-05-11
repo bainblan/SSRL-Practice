@@ -8,7 +8,7 @@ export default function AboutSection() {
         <h2 className="text-5xl md:text-6xl mb-8">Who We Are</h2>
 
         <p className="max-w-[850px] mx-auto mb-12 text-white/90 leading-8">
-          The Small Satellite Research Laboratory (SSRL) is developing and launching
+          SSRL is developing and launching
           new and innovative technologies into space by utilizing the CubeSat
           platform, a small-scale satellite that is designed for rapid iteration and
           development. The lab is currently driving technological innovation at UGA

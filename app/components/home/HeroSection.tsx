@@ -58,10 +58,14 @@ export default function HeroSection() {
           Welcome to the SSRL
         </h1>
 
-        <p className="text-lg md:text-xl max-w-[600px] mx-auto text-white/80 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
-          The Small Satellite Research Laboratory is developing and launching new and
-          innovative technologies into space by utilizing the CubeSat platform.
-        </p>
+        <div className="max-w-[600px] mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
+          <p className="text-lg md:text-xl text-white/80">
+            Our broad vision is development of nimble CubeSat bus and communication
+            platforms to address Earth-Observation and on-board processing in
+            near-real time of sensor data. Our vision broadens as technological
+            capabilities of CubeSat platform advances.
+          </p>
+        </div>
       </div>
     </section>
   );

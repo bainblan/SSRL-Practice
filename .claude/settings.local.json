@@ -10,7 +10,11 @@
       "Read(//c/Users/baine/AppData/Local/Microsoft/WinGet/Packages/**)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "WebFetch(domain:smallsat.uga.edu)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -sIL \"https://smallsatelliteresearchlaboratoryuga.github.io/\")",
+      "Bash(curl -sL \"https://smallsatelliteresearchlaboratoryuga.github.io/\")"
     ]
   }
 }
