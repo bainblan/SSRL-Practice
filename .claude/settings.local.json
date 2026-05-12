@@ -14,7 +14,9 @@
       "WebFetch(domain:smallsat.uga.edu)",
       "WebFetch(domain:github.com)",
       "Bash(curl -sIL \"https://smallsatelliteresearchlaboratoryuga.github.io/\")",
-      "Bash(curl -sL \"https://smallsatelliteresearchlaboratoryuga.github.io/\")"
+      "Bash(curl -sL \"https://smallsatelliteresearchlaboratoryuga.github.io/\")",
+      "Bash(git remote *)",
+      "Bash(git config *)"
     ]
   }
 }
